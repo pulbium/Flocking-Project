@@ -1,0 +1,32 @@
+﻿<Window x:Class="Flocking_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flocking_Project"
+        mc:Ignorable="d"
+        Title="Flocking Simulator" Height="620" Width="820" ResizeMode="NoResize">
+    <Grid>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="550" Margin="10,10,0,0" VerticalAlignment="Top" Width="620"></Canvas>
+        <Border BorderBrush="Black" BorderThickness="1" Height="560" Width="630" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0"/>
+        <Label x:Name="sepLabel" Content="Separation factor" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="650,111,0,0"/>
+        <Label x:Name="aliLabel" Content="Alignment factor" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="650,142,0,0"/>
+        <Label x:Name="cohLabel" Content="Cohesion factor" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="650,173,0,0"/>
+        <TextBox x:Name="sepTxtBox" HorizontalAlignment="Left" Height="23" Margin="756,115,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="45"/>
+        <TextBox x:Name="aliTxtBox" HorizontalAlignment="Left" Height="23" Margin="756,146,0,0" TextWrapping="Wrap" Text="0,01" VerticalAlignment="Top" Width="45" SelectionOpacity="4"/>
+        <TextBox x:Name="cohTxtBox" HorizontalAlignment="Left" Height="23" Margin="756,177,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="45"/>
+        <Button x:Name="startStopBtn" Content="START" HorizontalAlignment="Left" Margin="694,333,0,0" VerticalAlignment="Top" Width="75" Click="startStopBtn_Click"/>
+        <Button x:Name="resetBtn" Content="RESET" HorizontalAlignment="Left" Margin="694,357,0,0" VerticalAlignment="Top" Width="75" Click="resetBtn_Click"/>
+        <CheckBox x:Name="toroidalCheckBox" Content="Toroidal space" HorizontalAlignment="Left" Margin="655,279,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="amountLabel" Content="Amount of boids" HorizontalAlignment="Left" Margin="650,80,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="angleLabel" Content="Angle of vision" HorizontalAlignment="Left" Margin="650,49,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="angleTextBox" HorizontalAlignment="Left" Height="23" Margin="756,53,0,0" TextWrapping="Wrap" Text="270" VerticalAlignment="Top" Width="45" TextChanged="angleTextBox_TextChanged"/>
+        <TextBox x:Name="amountTextBox" HorizontalAlignment="Left" Height="23" Margin="756,84,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="45" TextChanged="amountTextBox_TextChanged"/>
+        <TextBox x:Name="maxSpeedTextBox" HorizontalAlignment="Left" Height="23" Margin="756,208,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="45"/>
+        <Label x:Name="maxSpeedLabel" Content="Max speed" HorizontalAlignment="Left" Margin="650,204,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="percRLabel" Content="Perception radius" HorizontalAlignment="Left" Margin="650,18,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="percRadiusTxtBox" HorizontalAlignment="Left" Height="23" Margin="756,22,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="45" TextChanged="percRadiusTxtBox_TextChanged"/>
+        <CheckBox x:Name="percRadCheckBox" Content="Show perception areas" HorizontalAlignment="Left" Margin="655,256,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
